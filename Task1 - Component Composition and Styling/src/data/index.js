@@ -1,11 +1,15 @@
+import product1 from "../assets/images/p1.webp";
+import product2 from "../assets/images/p2.webp";
+import product3 from "../assets/images/p3.webp";
+
+
 const products = [
   {
     id: 1,
     title: "Product 1",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     price: 19.99,
-    image:
-      "https://images.unsplash.com/photo-1650016883397-1225cb4e47b1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: product1,
   },
   {
     id: 2,
@@ -13,15 +17,14 @@ const products = [
     desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 29.99,
     image:
-      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      product2,
   },
   {
     id: 3,
     title: "Product 3",
     desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
     price: 39.99,
-    image:
-      "https://images.unsplash.com/photo-1623998022290-a74f8cc36563?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: product3,
   },
 ];
 
