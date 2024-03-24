@@ -1,10 +1,21 @@
-import { Box, Button, Card, CardBody, CardFooter, Divider, Heading, Image, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Card,
+  CardBody,
+  CardFooter,
+  Divider,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import AddToCart from "./AddToCart";
 
-const ProductCard = ( {product} ) => {
-	const {title, desc, price, image, addBtn} = product
-	return (
+const ProductCard = ({ product }) => {
+  const { title, desc, price, image } = product;
+  return (
     <Box>
-      <Card maxW="sm">
+      <Card maxW="sm" mb="4" h="500px" w="600px" bg="secondary">
         <CardBody>
           <Image
             src={image}
@@ -12,25 +23,22 @@ const ProductCard = ( {product} ) => {
             borderRadius="lg"
           />
           <Stack mt="6" spacing="3">
-            <Heading size="md">{title}</Heading>
-            <Text>
-              {desc}
-            </Text>
-            <Text color="blue.600" fontSize="2xl">
+            <Heading color="heading" size="md">
+              {title}
+            </Heading>
+            <Text color="text">{desc}</Text>
+            <Text color="price" fontSize="2xl">
               ${price}
             </Text>
           </Stack>
         </CardBody>
         <Divider />
         <CardFooter>
-         
-            <Button variant="solid" colorScheme="blue">
-              {addBtn}
-            </Button>
-         
+          <AddToCart />
         </CardFooter>
       </Card>
     </Box>
   );
-}
-export default ProductCard
+};
+
+export default ProductCard;
