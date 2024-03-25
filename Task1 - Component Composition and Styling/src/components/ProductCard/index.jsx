@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
   const { title, desc, price, image } = product;
   return (
     <Box>
-      <Card maxW="sm" mb="4" h="500px" w="600px" bg="secondary">
+      <Card maxW="sm" mb="4" bg="secondary">
         <CardBody>
           <Image
             src={image}

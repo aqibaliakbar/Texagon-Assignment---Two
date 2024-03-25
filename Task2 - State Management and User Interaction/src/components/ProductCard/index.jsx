@@ -9,14 +9,15 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import CardButtons from "./CardButtons";
 
-import DeleteButton from "./DeleteButton";
+
 
 const ProductCard = ({ product }) => {
   const { id, title, desc, price, image } = product;
   return (
     <Box>
-      <Card maxW="sm" mb="4" h="500px" w="600px" bg="secondary">
+      <Card maxW="sm"  h="500px" w="600px" bg="secondary">
         <CardBody>
           <Image
             src={image}
@@ -35,7 +36,7 @@ const ProductCard = ({ product }) => {
         </CardBody>
         <Divider />
         <CardFooter>
-          <DeleteButton id={id} />
+          <CardButtons id={id} />
         </CardFooter>
       </Card>
     </Box>

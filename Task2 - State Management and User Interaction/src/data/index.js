@@ -1,32 +1,29 @@
-import product1 from "../assets/images/p1.webp";
-import product2 from "../assets/images/p2.webp";
-import product3 from "../assets/images/p3.webp";
-
+import Laptop from "../assets/images/p1.webp";
+import AirPods from "../assets/images/p2.webp";
+import Mobile from "../assets/images/p3.webp";
 
 const productsData = [
   {
     id: 1,
-    title: "Product 1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    price: 19.99,
-    image: product1,
+    title: "MacBook Pro",
+    desc: "The most advanced chips ever built for a personal computer.",
+    price: 1599,
+    image: Laptop,
   },
   {
     id: 2,
-    title: "Product 2",
-    desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "AirPods Pro",
+    desc: "A magical connection to your devices.",
     price: 29.99,
-    image:
-      product2,
+    image: AirPods,
   },
   {
     id: 3,
-    title: "Product 3",
-    desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    price: 39.99,
-    image: product3,
+    title: "iPhone 15 Pro",
+    desc: "A camera that captures your wildest imagination.",
+    price: 999,
+    image: Mobile,
   },
 ];
 
 export default productsData;
-

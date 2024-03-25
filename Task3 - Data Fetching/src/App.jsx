@@ -10,7 +10,15 @@ function App() {
   const { products, status, error } = useSelector((state) => state.product);
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    const fetchData = async () => {
+      try {
+        await dispatch(fetchProducts());
+      } catch (error) {
+        console.error("Error fetching products:", error.message);
+      }
+    };
+
+    fetchData();
   }, [dispatch]);
 
   const handleResetProducts = () => {
@@ -23,7 +31,7 @@ function App() {
       <Navbar handleResetProducts={handleResetProducts} />
       <Box maxW="container.xl" mx="auto" mt="8rem">
         <Flex justify="center" align="center" gap="2rem" flexWrap="wrap">
-          {status === "loading" && <Text>Loading...</Text>}
+          {status === "loading" && <Text >Loading...</Text>}
           {status === "failed" && <Text>Error: {error}</Text>}
           {status === "succeeded" &&
             products.map((product) => (
