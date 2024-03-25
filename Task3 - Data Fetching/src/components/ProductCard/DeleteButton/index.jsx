@@ -4,11 +4,12 @@ import { deleteProduct } from "../../../Redux/productSlice";
 
 const DeleteButton = ({ id }) => {
   const dispatch = useDispatch();
-  const handleDelete = () => {
-    dispatch(deleteProduct(id));
+
+  const handleDelete = (productId) => {
+    dispatch(deleteProduct(productId));
   };
   return (
-    <Button colorScheme="red" onClick={handleDelete}>
+    <Button colorScheme="red" onClick={() => handleDelete(id)}>
       Delete
     </Button>
   );
