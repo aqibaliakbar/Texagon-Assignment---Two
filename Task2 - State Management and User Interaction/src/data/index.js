@@ -1,6 +1,6 @@
 import Laptop from "../assets/images/p1.webp";
-import AirPods from "../assets/images/p2.webp";
-import Mobile from "../assets/images/p3.webp";
+import AirPods from "../assets/images/p3.webp";
+import Mobile from "../assets/images/p2.webp";
 
 const productsData = [
   {

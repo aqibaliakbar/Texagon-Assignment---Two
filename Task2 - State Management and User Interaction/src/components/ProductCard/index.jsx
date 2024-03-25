@@ -1,5 +1,6 @@
 import {
   Box,
+  ButtonGroup,
   Card,
   CardBody,
   CardFooter,
@@ -9,7 +10,8 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import CardButtons from "./CardButtons";
+import AddToCart from "../AddToCart";
+import DeleteProductButton from "../DeleteProductButton";
 
 
 
@@ -36,7 +38,10 @@ const ProductCard = ({ product }) => {
         </CardBody>
         <Divider />
         <CardFooter>
-          <CardButtons id={id} />
+          <ButtonGroup spacing="2">
+            <AddToCart />
+            <DeleteProductButton id={id}/>
+           </ButtonGroup>
         </CardFooter>
       </Card>
     </Box>

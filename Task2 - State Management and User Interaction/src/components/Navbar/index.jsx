@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Image, Link } from "@chakra-ui/react";
 import Logo from "../../assets/images/logo.svg";
-import { resetProducts } from "../../Redux/productSlice";
+import { resetProducts } from "../../store/productSlice";
 import { useDispatch } from "react-redux";
 
 const Navbar = () => {
