@@ -5,17 +5,17 @@ import { useDispatch } from "react-redux";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  
-      const handleReset = () => {
-        dispatch(resetProducts());
-      };
+
+  const handleReset = () => {
+    dispatch(resetProducts());
+  };
   return (
     <Box bg="secondary" px={5} py={4} w="100vw">
       <Flex justify="space-between">
         <Link>
           <Image src={Logo} alt="Texagon Logo" />
         </Link>
-        <Button  colorScheme="red" onClick={handleReset}>
+        <Button colorScheme="red" onClick={handleReset}>
           Reset Products
         </Button>
       </Flex>

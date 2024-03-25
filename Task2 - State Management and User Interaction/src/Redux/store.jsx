@@ -1,4 +1,3 @@
-// store.js
 import { configureStore } from "@reduxjs/toolkit";
 import productReducer from "../Redux/productSlice.jsx";
 
