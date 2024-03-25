@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Spinner, Text } from "@chakra-ui/react";
 import ProductCard from "./components/ProductCard/index.jsx";
 import Navbar from "./components/Navbar/index.jsx";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,7 +31,7 @@ function App() {
       <Navbar handleResetProducts={handleResetProducts} />
       <Box maxW="container.xl" mx="auto" mt="8rem">
         <Flex justify="center" align="center" gap="2rem" flexWrap="wrap">
-          {status === "loading" && <Text>Loading...</Text>}
+          {status === "loading" && <Spinner alignSelf="center" justifySelf="center" h="20%" w="20%" mt="10rem"/>}
           {status === "failed" && <Text>Error: {error}</Text>}
           {status === "succeeded" &&
             products.map((product) => (
