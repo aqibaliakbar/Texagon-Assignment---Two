@@ -13,13 +13,11 @@ import {
 import AddToCart from "../AddToCart";
 import DeleteProductButton from "../DeleteProductButton";
 
-
-
 const ProductCard = ({ product }) => {
   const { id, title, desc, price, image } = product;
   return (
     <Box>
-      <Card maxW="sm"  h="500px" w="600px" bg="secondary">
+      <Card maxW="sm" h="500px" w="600px" bg="secondary">
         <CardBody>
           <Image
             src={image}
@@ -40,8 +38,8 @@ const ProductCard = ({ product }) => {
         <CardFooter>
           <ButtonGroup spacing="2">
             <AddToCart />
-            <DeleteProductButton id={id}/>
-           </ButtonGroup>
+            <DeleteProductButton id={id} />
+          </ButtonGroup>
         </CardFooter>
       </Card>
     </Box>

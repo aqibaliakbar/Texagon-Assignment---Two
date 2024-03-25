@@ -22,7 +22,7 @@ function App() {
         />
         <ProductCard
           title={"AirPods Pro"}
-          desc={"A magical connection to your devices."}
+          desc={"A magical connection to your devices. It’s magic, remastered."}
           price={29.99}
           image={AirPods}
         />
