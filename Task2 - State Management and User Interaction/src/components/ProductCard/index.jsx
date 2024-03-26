@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   Box,
   ButtonGroup,
@@ -44,6 +45,16 @@ const ProductCard = ({ product }) => {
       </Card>
     </Box>
   );
+};
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default ProductCard;

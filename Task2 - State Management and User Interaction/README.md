@@ -23,6 +23,7 @@ This repository builds upon the previous task, "React Component Composition & St
    - Actions and reducers are defined to manage the state related to displaying products, deleting specific products, and resetting the product list.
 
 **Libraries Used:**
+- **Chakra UI:** Provides a component library for building React applications with customizable and accessible UI components.
 - **Redux Toolkit:** Provides utilities that streamline common Redux tasks, simplifying the Redux workflow.
 - **React Redux:** Official React bindings for Redux, facilitating the integration of Redux with React components.
 

@@ -23,6 +23,7 @@ This repository extends the functionality of the previous task, "State Managemen
    - Thunks are dispatched from React components to fetch data, and the updated data is reflected in the Redux store.
 
 **Libraries Used:**
+- **Chakra UI:** Provides a component library for building React applications with customizable and accessible UI components.
 - **Redux Toolkit:** Provides utilities for efficient state management, including async thunk middleware for handling asynchronous operations.
 - **React Redux:** Official React bindings for Redux, facilitating the integration of Redux with React components.
 

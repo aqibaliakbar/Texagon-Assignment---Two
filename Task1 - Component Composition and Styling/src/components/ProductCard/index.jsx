@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   Card,
   CardBody,
@@ -35,6 +36,13 @@ const ProductCard = ({ title, desc, price, image }) => {
       </CardFooter>
     </Card>
   );
+};
+
+ProductCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default ProductCard;

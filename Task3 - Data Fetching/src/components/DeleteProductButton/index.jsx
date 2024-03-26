@@ -1,5 +1,5 @@
+import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-
 import { Button } from "@chakra-ui/react";
 import { deleteProduct } from "../../store/productSlice";
 
@@ -13,5 +13,9 @@ const DeleteProductButton = ({ id }) => {
       Delete
     </Button>
   );
+};
+
+DeleteProductButton.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 export default DeleteProductButton;
