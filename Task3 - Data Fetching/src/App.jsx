@@ -2,7 +2,7 @@ import { Box, Flex, Spinner, Text } from "@chakra-ui/react";
 import ProductCard from "./components/ProductCard/index.jsx";
 import Navbar from "./components/Navbar/index.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts, resetProducts } from "./store/productSlice.jsx";
+import { fetchProducts } from "./store/productSlice.jsx";
 import { useEffect } from "react";
 
 function App() {
@@ -21,17 +21,20 @@ function App() {
     fetchData();
   }, [dispatch]);
 
-  const handleResetProducts = () => {
-    dispatch(resetProducts());
-    dispatch(fetchProducts());
-  };
-
   return (
     <>
-      <Navbar handleResetProducts={handleResetProducts} />
+      <Navbar />
       <Box maxW="container.xl" mx="auto" mt="8rem">
         <Flex justify="center" align="center" gap="2rem" flexWrap="wrap">
-          {status === "loading" && <Spinner alignSelf="center" justifySelf="center" h="20%" w="20%" mt="10rem"/>}
+          {status === "loading" && (
+            <Spinner
+              alignSelf="center"
+              justifySelf="center"
+              h="20%"
+              w="20%"
+              mt="10rem"
+            />
+          )}
           {status === "failed" && <Text>Error: {error}</Text>}
           {status === "succeeded" &&
             products.map((product) => (
